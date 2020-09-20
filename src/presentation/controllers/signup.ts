@@ -3,13 +3,14 @@ import { MissingParamError } from '../errors/missing-param-error'
 
 export class SignUpController {
   handle (httpRequest: HttpRequest): HttpReponse {
-    if (!httpRequest.body.name) {
+    const { name, email } = httpRequest.body
+    if (!name) {
       return {
         statusCode: 400,
         body: new MissingParamError('name')
       }
     }
-    if (!httpRequest.body.email) {
+    if (!email) {
       return {
         statusCode: 400,
         body: new MissingParamError('e-mail')
