@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --passWithNoTests --watchAll --maxWorkers=25% --coverage=false",
-    "test:staged": "jest --passWithNoTests --maxWorkers=50%"
+    "test": "jest --passWithNoTests --silent --coverage=false --noStackTrace --runInBand --no-cache",
+    "test:unit": "yarn test --watch -c jest-unit-config.js",
+    "test:integration": "yarn test --watch -c jest-integration-config.js",
+    "test:verbose": "jest --passWithNoTests --noStackTrace --runInBand",
+    "test:staged": "yarn test --findRelatedTests",
+    "test:ci": "yarn test:verbose --coverage=true"
   },
   "keywords": [],
   "author": "",
