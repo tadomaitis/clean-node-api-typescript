@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --passWithNoTests --watchAll --maxWorkers=25%",
+    "test": "jest --passWithNoTests --watchAll --maxWorkers=25% --coverage=false",
     "test:staged": "jest --passWithNoTests --maxWorkers=50%"
   },
   "keywords": [],
