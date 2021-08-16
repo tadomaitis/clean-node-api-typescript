@@ -6,6 +6,7 @@ const config: Config.InitialOptions = {
   collectCoverage: true,
   coverageDirectory: 'coverage',
   testEnvironment: 'node',
+  preset: '@shelf/jest-mongodb',
   moduleNameMapper: {
     '^@data/(.*)': '<rootDir>/src/data/$1',
     '^@domain/(.*)': '<rootDir>/src/domain/$1',
