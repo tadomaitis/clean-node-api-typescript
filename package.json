@@ -8,7 +8,7 @@
     "test": "jest --passWithNoTests --silent --coverage=false --noStackTrace --runInBand --no-cache",
     "test:unit": "yarn test --watch -c jest-unit-config.ts",
     "test:integration": "yarn test --watch -c jest-integration-config.ts",
-    "test:verbose": "jest --passWithNoTests --noStackTrace --runInBand",
+    "test:verbose": "jest --passWithNoTests --runInBand",
     "test:staged": "yarn test --findRelatedTests",
     "test:ci": "yarn test:verbose --coverage=true"
   },
@@ -43,6 +43,7 @@
   "dependencies": {
     "bcrypt": "^5.0.1",
     "express": "^4.17.1",
+    "fast-glob": "^3.2.7",
     "mongodb": "^3.6.11",
     "validator": "^13.6.0"
   }
