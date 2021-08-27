@@ -3,16 +3,16 @@
     "outDir": "./dist",
     "module": "commonjs",
     "target": "ES2019",
-    "baseUrl": ".",
+    "rootDir": ".",
+    "baseUrl": "src",
     "paths": {
-      "@data/*":["./src/data/*"],
-      "@domain/*":["./src/domain/*"],
-      "@presentation/*":["./src/presentation/*"],
-      "@utils/*":["./src/utils/*"],
-      "@infra/*":["./src/infra/*"],
-      "@main/*":["./src/main/*"]
+     "@/*" : ["*"]
     },
     "esModuleInterop": true,
     "allowJs": true
-  }
+  },
+  "include": [
+    "src",
+    "jest.config.ts"
+  ]
 }

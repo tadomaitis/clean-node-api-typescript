@@ -8,12 +8,7 @@ const config: Config.InitialOptions = {
   testEnvironment: 'node',
   preset: '@shelf/jest-mongodb',
   moduleNameMapper: {
-    '^@data/(.*)': '<rootDir>/src/data/$1',
-    '^@domain/(.*)': '<rootDir>/src/domain/$1',
-    '^@presentation/(.*)': '<rootDir>/src/presentation/$1',
-    '^@utils/(.*)': '<rootDir>/src/utils/$1',
-    '^@infra/(.*)': '<rootDir>/src/infra/$1',
-    '^@main/(.*)': '<rootDir>/src/main/$1'
+    '^@/(.*)': '<rootDir>/src/$1'
   },
   transform: {
     '.+\\.ts$': 'ts-jest'

@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "sucrase-node src/main/server.ts",
     "start": "sucrase-node src/main/server.ts",
+    "build": "rimraf dist && tsc -p tsconfig-build.json",
     "test": "jest --passWithNoTests --silent --coverage=false --noStackTrace --runInBand --no-cache",
     "test:unit": "yarn test --watch -c jest-unit-config.ts",
     "test:integration": "yarn test --watch -c jest-integration-config.ts",
@@ -44,7 +46,11 @@
     "bcrypt": "^5.0.1",
     "express": "^4.17.1",
     "fast-glob": "^3.2.7",
+    "module-alias": "^2.2.2",
     "mongodb": "^3.6.11",
     "validator": "^13.6.0"
+  },
+  "_moduleAliases": {
+    "@": "src"
   }
 }
