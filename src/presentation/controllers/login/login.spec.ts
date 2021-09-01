@@ -41,7 +41,7 @@ describe('Login Controller', () => {
     const { sut } = makeSut()
     const httpRequest = {
       body: {
-        email: 'any_email'
+        email: 'any_email@mail.com'
       }
     }
     const httpResponse = await sut.handle(httpRequest)
@@ -52,11 +52,11 @@ describe('Login Controller', () => {
     const isValidSpy = jest.spyOn(emailValidatorStub, 'isValid')
     const httpRequest = {
       body: {
-        email: 'any_email',
+        email: 'any_email@mail.com',
         password: 'any_password'
       }
     }
     await sut.handle(httpRequest)
-    expect(isValidSpy).toHaveBeenCalledWith('any_email')
+    expect(isValidSpy).toHaveBeenCalledWith('any_email@mail.com')
   })
 })
